@@ -1,11 +1,40 @@
-# Mujoco RL Training
+# SAC MuJoCo Navigation
 
-Mujoco RL Training is a project that uses reinforcement learning to train an agent in a Mujoco environment. The project utilizes the Mujoco library and PyTorch for building and training the RL models.
+A minimal implementation of Soft Actor-Critic (SAC) in PyTorch using MuJoCo.
 
-## Technologies Used
-- Mujoco: for environment simulation
-- PyTorch: for building and training RL models
+The agent controls a 2D particle and learns to navigate toward randomly placed targets.
 
-## How to Run
-1. Install required libraries by running `pip install mujoco-py torch numpy` in your terminal
-2. Run the training script by executing `python mujuco_learn1.py` in your terminal
+---
+
+## Features
+
+- Soft Actor-Critic (SAC)
+- Twin Q-networks
+- Target networks with Polyak averaging
+- Gaussian policy with tanh squashing
+- Replay buffer
+- Continuous action space
+- MuJoCo visualization
+
+---
+
+## Environment
+
+The environment contains:
+
+- Agent represented as a blue sphere
+- Target represented as a purple sphere
+- Two slide joints controlling X and Y movement
+- Randomized initial positions
+- Randomized target positions
+
+
+
+## Future Improvements
+
+- Automatic entropy tuning
+- Vectorized environments
+- Proper Gymnasium wrapper
+- TensorBoard logging
+- Checkpoint manager
+- Support for larger MuJoCo tasks
